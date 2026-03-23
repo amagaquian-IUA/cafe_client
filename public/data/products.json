@@ -1,0 +1,194 @@
+[
+    {
+        "id": 1,
+        "title": "Caffè Latte",
+        "desc": "Rich, full-bodied espresso in steamed milk with a light layer of foam.",
+        "price": 4.75,
+        "category": "coffee",
+        "image": "./src/assets/productos/prod_1.png"
+    },
+    {
+        "id": 2,
+        "title": "Caramel Macchiato",
+        "desc": "Freshly steamed milk with vanilla-flavored syrup marked with espresso and topped with caramel drizzle.",
+        "price": 5.45,
+        "category": "coffee",
+        "image": "./src/assets/productos/prod_2.png"
+    },
+    {
+        "id": 3,
+        "title": "Cappuccino",
+        "desc": "Dark, rich espresso lies in wait under a smoothed and stretched layer of thick milk foam.",
+        "price": 4.95,
+        "category": "coffee",
+        "image": "./src/assets/productos/prod_3.png"
+    },
+    {
+        "id": 4,
+        "title": "Java Chip Frappuccino",
+        "desc": "We blend mocha sauce and Frappuccino chips with coffee, milk and ice, then top it off with whipped cream and mocha drizzle.",
+        "price": 5.95,
+        "category": "coffee",
+        "image": "./src/assets/productos/prod_1.png"
+    },
+    {
+        "id": 5,
+        "title": "Caffè Mocha",
+        "desc": "We combine our rich, full-bodied espresso with bittersweet mocha sauce and steamed milk, then top it off with sweetened whipped cream.",
+        "price": 5.25,
+        "category": "coffee",
+        "image": "./src/assets/productos/prod_1.png"
+    },
+    {
+        "id": 6,
+        "title": "Iced Brown Sugar Oatmilk Shaken Espresso",
+        "desc": "We shake Starbucks® Blonde espresso, brown sugar and cinnamon together, and then top it off with oatmilk and ice.",
+        "price": 6.25,
+        "category": "coffee",
+        "image": "./src/assets/productos/prod_1.png"
+    },
+    {
+        "id": 7,
+        "title": "Flat White",
+        "desc": "Smooth ristretto shots of espresso get just the right amount of steamed whole milk to create a not-too-strong, not-too-creamy, just-right flavor.",
+        "price": 5.25,
+        "category": "coffee",
+        "image": "./src/assets/productos/prod_1.png"
+    },
+    {
+        "id": 8,
+        "title": "Matcha Tea Latte",
+        "desc": "Smooth and creamy matcha sweetened just right and served with steamed milk.",
+        "price": 5.45,
+        "category": "coffee",
+        "image": "./src/assets/productos/prod_1.png"
+    },
+    {
+        "id": 9,
+        "title": "Cold Brew",
+        "desc": "Slow-steeped in cool water for 20 hours, without touching heat.",
+        "price": 4.45,
+        "category": "coffee",
+        "image": "./src/assets/productos/prod_1.png"
+    },
+    {
+        "id": 10,
+        "title": "Black Coffee",
+        "desc": "Black tea infused with cinnamon, clove and other warming spices is combined with steamed milk and topped with foam.",
+        "price": 4.95,
+        "category": "coffee",
+        "image": "./src/assets/productos/prod_1.png"
+    },
+    {
+        "id": 11,
+        "title": "Chai Tea Latte",
+        "desc": "Black tea infused with cinnamon, clove and other warming spices is combined with steamed milk and topped with foam.",
+        "price": 4.95,
+        "category": "coffee",
+        "image": "./src/assets/productos/prod_11.jpg"
+    },
+    {
+        "id": 11,
+        "title": "Earl Grey Tea",
+        "desc": "A classic black tea infused with the citrusy flavor of bergamot orange.",
+        "price": 4.25,
+        "category": "tea",
+        "image": "./src/assets/productos/prod_11.jpg"
+    },
+    {
+        "id": 12,
+        "title": "Green Tea",
+        "desc": "A refreshing and healthy green tea with a clean, earthy taste.",
+        "price": 3.95,
+        "category": "tea",
+        "image": "./src/assets/productos/prod_11.jpg"
+    },
+    {
+        "id": 13,
+        "title": "Chamomile Tea",
+        "desc": "A soothing herbal tea made from dried chamomile flowers, perfect for relaxation.",
+        "price": 4.50,
+        "category": "tea",
+        "image": "./src/assets/productos/prod_11.jpg"
+    },
+    {
+        "id": 14,
+        "title": "Peppermint Tea",
+        "desc": "Cool and refreshing peppermint leaves steeped for a bright, minty flavor.",
+        "price": 4.25,
+        "category": "tea",
+        "image": "./src/assets/productos/prod_11.jpg"
+    },
+    {
+        "id": 15,
+        "title": "Jasmine Tea",
+        "desc": "Delicate green tea scented with the aroma of fresh jasmine blossoms.",
+        "price": 4.75,
+        "category": "tea",
+        "image": "./src/assets/productos/prod_11.jpg"
+    },
+    {
+        "id": 16,
+        "title": "Rooibos Tea",
+        "desc": "A naturally caffeine-free herbal tea from South Africa with a sweet, earthy profile.",
+        "price": 4.95,
+        "category": "tea",
+        "image": "./src/assets/productos/prod_11.jpg"
+    },
+    {
+        "id": 17,
+        "title": "Oolong Tea",
+        "desc": "A traditional Chinese tea with a complex flavor profile between green and black tea.",
+        "price": 5.25,
+        "category": "tea",
+        "image": "./src/assets/productos/prod_11.jpg"
+    },
+    {
+        "id": 18,
+        "title": "White Tea",
+        "desc": "A delicate and minimally processed tea with a light, subtle sweetness.",
+        "price": 5.45,
+        "category": "tea",
+        "image": "./src/assets/productos/prod_11.jpg"
+    },
+    {
+        "id": 19,
+        "title": "Blueberry Muffin",
+        "desc": "A delicious muffin packed with fresh blueberries and a hint of lemon.",
+        "price": 3.25,
+        "category": "pastries",
+        "image": "./src/assets/productos/prod_19.jpg"
+    },
+    {
+        "id": 20,
+        "title": "Chocolate Croissant",
+        "desc": "Flaky, buttery pastry filled with rich dark chocolate.",
+        "price": 3.95,
+        "category": "pastries",
+        "image": "./src/assets/productos/prod_19.jpg"
+    },
+    {
+        "id": 21,
+        "title": "Cinnamon Roll",
+        "desc": "Soft, doughy roll swirled with cinnamon and topped with sweet icing.",
+        "price": 4.25,
+        "category": "pastries",
+        "image": "./src/assets/productos/prod_19.jpg"
+    },
+    {
+        "id": 22,
+        "title": "Apple Turnover",
+        "desc": "Crisp puff pastry filled with sweet cinnamon-spiced apples.",
+        "price": 3.50,
+        "category": "pastries",
+        "image": "./src/assets/productos/prod_19.jpg"
+    },
+    {
+        "id": 23,
+        "title": "Cheesecake Slice",
+        "desc": "Creamy and smooth New York style cheesecake on a graham cracker crust.",
+        "price": 5.95,
+        "category": "pastries",
+        "image": "./src/assets/productos/prod_19.jpg"
+    }
+]
