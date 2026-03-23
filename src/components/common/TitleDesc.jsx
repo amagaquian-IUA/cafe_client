@@ -1,3 +1,5 @@
+import { Label } from "../ui/label"
+
 export default function TitleDesc({ title, desc, variant }) {
 
     const variants = {
@@ -29,9 +31,9 @@ export default function TitleDesc({ title, desc, variant }) {
 
     return (
         <>
-            <h1 className={variants[variant].title}>{title}</h1>
+            <Label className={variants[variant].title}>{title}</Label>
             {
-                desc ?? <p className={variants[variant].desc}>{desc}</p>
+                desc ?? <Label className={variants[variant].desc}>{desc}</Label>
             }
 
         </>
