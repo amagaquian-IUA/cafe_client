@@ -48,7 +48,7 @@ export default function Landing() {
                         {
                             prods.map((e) => (
 
-                                <CardProducts title={e.title} desc={e.desc} price={e.price} cat={e.category} img={e.image} />
+                                <CardProducts prod={e} />
                             ))
                         }
 
@@ -60,3 +60,6 @@ export default function Landing() {
         </>
     )
 }
+
+
+//<CardProducts title={e.title} desc={e.desc} price={e.price} cat={e.category} img={e.image} />
