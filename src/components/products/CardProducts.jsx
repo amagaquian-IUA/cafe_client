@@ -6,15 +6,16 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
-import { Label } from "../ui/label"
-import { Badge } from "../ui/badge"
 
+import { Link } from "react-router-dom"
+import { Badge } from "../ui/badge"
+import { Label } from "../ui/label"
 import { currencyFormatter } from "@/lib/utils"
 import { category_map } from '@/lib/maps/category'
 
 
-export default function CardProducts({ title, desc, price, cat, img }) {
-
+export default function CardProducts({ prod }) {
+    const { title, desc, price, category: cat, image: img, id } = prod
     const IconComponent = category_map[cat].Icon
     return (
 
@@ -32,13 +33,20 @@ export default function CardProducts({ title, desc, price, cat, img }) {
                     <div className={`${category_map[cat].color} p-2 text-neutral-50 rounded-full`}><IconComponent size={15} /></div>
 
                 </CardAction>
-                <CardTitle>{title}</CardTitle>
+
+                <Link to={`/product/${id}`}>
+                    <CardTitle className={"text-neutral-500 hover:text-neutral-950 "}>{title}</CardTitle>
+                </Link>
+
                 <CardDescription>
                     {desc}
                 </CardDescription>
             </CardHeader>
             <CardFooter>
+
+
                 <Label>{currencyFormatter(price)}</Label>
+
             </CardFooter>
         </Card>
     )
