@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "name": "coffee",
+        "label": "Café"
+    },
+    {
+        "id": 2,
+        "name": "tea",
+        "label": "Té"
+    },
+    {
+        "id": 3,
+        "name": "pastries",
+        "label": "Pasteleria"
+    }
+]

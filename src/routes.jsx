@@ -5,9 +5,9 @@ import Products from './pages/products/Products';
 import Error from './pages/error/Error';
 const router = createBrowserRouter([
     {
-        path: "/",
+        path: "/:cat?",
         element: <Landing />,
-        errorElement: <Error />
+        errorElement: <Error type={"error_desconocido"} />
     },
     {
         path: "/product/:id",
