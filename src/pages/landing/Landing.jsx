@@ -5,13 +5,12 @@ import Hero from "@/components/landing/Hero"
 import TitleDesc from "@/components/common/TitleDesc"
 import CardProducts from "@/components/products/CardProducts"
 import ButtonGroup from "@/components/common/ButtonGroup"
-
 /*Funciones */
 import { getProducts, getProdByCat } from "@/lib/api/product"
 import { getCategories } from "@/lib/api/category"
 
 import { useParams, useNavigate } from "react-router-dom"
-
+import InputAddon from "@/components/common/inputs/InputAddon"
 export default function Landing() {
     /* Navegación*/
     /* Hero*/
@@ -66,6 +65,10 @@ export default function Landing() {
         navigate(`/${selectedCat}`)
     }
 
+    const onChange = (value) => {
+        console.log(value)
+    }
+
     return (
         <>
 
@@ -82,7 +85,12 @@ export default function Landing() {
             </section>
 
             <section id="cat_filter">
-                <ButtonGroup data={cats} selectedItem={cat} onClick={handleChangeCat} />
+                <div className="flex flex-col md:flex-row justify-center items-center gap-5 ">
+                    <ButtonGroup data={cats} selectedItem={cat} onClick={handleChangeCat} />
+                    <div className="w-full md:w-1/5 px-5 md:p-0">
+                        <InputAddon inputType={"search"} onChange={onChange} />
+                    </div>
+                </div>
             </section>
             <section id="prod_section">
                 <div className="p-5 flex flex-col gap-5">
