@@ -9,7 +9,7 @@ import ButtonGroup from "@/components/common/ButtonGroup"
 import { getProducts, getProdByCat } from "@/lib/api/product"
 import { getCategories } from "@/lib/api/category"
 
-import { useParams, useNavigate } from "react-router-dom"
+import { useParams, useNavigate, useSearchParams } from "react-router-dom"
 import InputAddon from "@/components/common/inputs/InputAddon"
 export default function Landing() {
     /* Navegación*/
@@ -19,20 +19,29 @@ export default function Landing() {
         -Card de productos
     */
 
+    /*ESTADOS */
     const [prods, setProds] = useState([])
     const [cats, setCats] = useState([])
+    const [renderProds, setRenderProds] = useState([])
 
+
+    /*REACT ROUTER DOM */
     const { cat } = useParams()
     const navigate = useNavigate()
+    const [searchParams, setSearchParams] = useSearchParams()
+
+
 
     const fetchProds = async () => {
         const data = await getProducts()
         setProds(data)
+        setRenderProds(data)
     }
 
     const fetchProdsByCat = async (cat) => {
         const data = await getProdByCat(cat)
         setProds(data)
+        setRenderProds(data)
     }
 
     const fetchCats = async () => {
@@ -46,6 +55,17 @@ export default function Landing() {
         setCats(data)
     }
 
+    const filterByName = () => {
+        const filter = searchParams.get('name')
+
+        if (!filter) {
+            setRenderProds(prods)
+            return
+        }
+        const res = prods.filter((e) => e.title.toLowerCase().includes(filter.toLowerCase()))
+        setRenderProds(res)
+    }
+
     useEffect(() => {
         fetchCats()
     }, [])
@@ -57,16 +77,22 @@ export default function Landing() {
         } else {
             fetchProdsByCat(cat)
         }
-
-
     }, [cat])
 
+    useEffect(() => {
+        filterByName()
+    }, [prods, searchParams])
+
     const handleChangeCat = (selectedCat) => {
-        navigate(`/${selectedCat}`)
+        const filter = searchParams.get('name')
+
+        let url = filter ? `/${selectedCat}?name=${filter}` : `/${selectedCat}`
+
+        navigate(url)
     }
 
     const onChange = (value) => {
-        console.log(value)
+        setSearchParams({ name: value })
     }
 
     return (
@@ -100,7 +126,7 @@ export default function Landing() {
 
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
                         {
-                            prods && prods.length > 0 ? prods.map((e) => (
+                            renderProds && renderProds.length > 0 ? renderProds.map((e) => (
 
                                 <CardProducts prod={e} />
                             )) : <p>No se encontraron productos :/</p>
