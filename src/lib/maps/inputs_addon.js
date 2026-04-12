@@ -1,4 +1,4 @@
-import { SearchIcon, MailIcon, CreditCardIcon } from "lucide-react"
+import { SearchIcon, MailIcon, CreditCardIcon, LockIcon } from "lucide-react"
 
 export const inputAddon_map = {
     search: {
@@ -15,5 +15,10 @@ export const inputAddon_map = {
         type: "number",
         Icon: CreditCardIcon,
         placeHolder: "Ingresa el número de tu tarjeta"
+    },
+    password: {
+        type: "password",
+        Icon: LockIcon,
+        placeHolder: "Ingresa tu contraseña"
     }
 }

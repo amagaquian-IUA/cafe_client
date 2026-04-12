@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react"
 
 /*Componentes */
-import Hero from "@/components/landing/Hero"
 import TitleDesc from "@/components/common/TitleDesc"
 import CardProducts from "@/components/products/CardProducts"
 import ButtonGroup from "@/components/common/ButtonGroup"
@@ -86,8 +85,8 @@ export default function Landing() {
     const handleChangeCat = (selectedCat) => {
         const filter = searchParams.get('name')
 
-        let url = filter ? `/${selectedCat}?name=${filter}` : `/${selectedCat}`
-
+        //let url = filter ? `/${selectedCat}?name=${filter}` : `/${selectedCat}`
+        let url = `/${selectedCat}`
         navigate(url)
     }
 
@@ -97,18 +96,6 @@ export default function Landing() {
 
     return (
         <>
-
-            <section id="hero_section">
-                <Hero>
-
-                    <TitleDesc
-                        title={"Bienvenido a Aroma Café"}
-                        desc={"Descubre nuestra selección de cafés de especialidad, tés aromáticos y deliciosos bocados preparados con los mejores ingredientes."}
-                        variant={"primary_title"}
-                    />
-                </Hero>
-
-            </section>
 
             <section id="cat_filter">
                 <div className="flex flex-col md:flex-row justify-center items-center gap-5 ">
