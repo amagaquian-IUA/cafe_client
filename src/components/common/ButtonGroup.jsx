@@ -12,9 +12,9 @@ export default function ButtonGroup({ data, selectedItem = "all", onClick }) {
             {
                 data && data.length > 0 ? data.map((e, i) => (
                     <Button
-                        variant={selectedItem === e.name ? "default" : "outline"}
+                        variant={selectedItem === e.id ? "default" : "outline"}
                         key={e.id}
-                        onClick={() => { handleClick(e.name) }}
+                        onClick={() => { handleClick(e.id) }}
                     >
                         {e.label}
                     </Button>

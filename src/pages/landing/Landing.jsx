@@ -45,8 +45,9 @@ export default function Landing() {
 
     const fetchCats = async () => {
         const data = await getCategories()
+        console.log(data)
         const allCat = {
-            "id": 0,
+            "id": "all",
             "name": "all",
             "label": "Todos los productos"
         }
@@ -61,7 +62,7 @@ export default function Landing() {
             setRenderProds(prods)
             return
         }
-        const res = prods.filter((e) => e.title.toLowerCase().includes(filter.toLowerCase()))
+        const res = prods.filter((e) => e.name.toLowerCase().includes(filter.toLowerCase()))
         setRenderProds(res)
     }
 
@@ -109,13 +110,13 @@ export default function Landing() {
                 <div className="p-5 flex flex-col gap-5">
 
 
-                    {cats && <TitleDesc title={cats.find((e) => e.name === (cat || 'all'))?.label || "Todas las categorias"} variant={"secondary_title"} />}
+                    {cats && <TitleDesc title={cats.find((e) => e.id === (cat || 'all'))?.label || "Todas las categorias"} variant={"secondary_title"} />}
 
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
                         {
                             renderProds && renderProds.length > 0 ? renderProds.map((e) => (
 
-                                <CardProducts prod={e} />
+                                <CardProducts key={e.id} prod={e} />
                             )) : <p>No se encontraron productos :/</p>
                         }
 
