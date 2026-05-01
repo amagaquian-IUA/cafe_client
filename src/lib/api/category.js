@@ -1,6 +1,7 @@
-export const getCategories = async () => {
-    const res = await fetch('/data/categories.json')
-    const data = await res.json()
+import { supabase } from '../supabase'
 
-    return data
+
+export const getCategories = async () => {
+    const { data: categories } = await supabase.from('categories').select()
+    return categories
 }

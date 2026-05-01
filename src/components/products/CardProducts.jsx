@@ -15,8 +15,9 @@ import { category_map } from '@/lib/maps/category'
 
 
 export default function CardProducts({ prod }) {
-    const { title, desc, price, category: cat, image: img, id } = prod
-    const IconComponent = category_map[cat].Icon
+    const { name: title, desc, price, categories, image: img, id } = prod
+    const cat = categories?.name
+    const IconComponent = category_map[cat]?.Icon
     return (
 
 
@@ -29,8 +30,10 @@ export default function CardProducts({ prod }) {
             />
             <CardHeader>
                 <CardAction>
-                    {/* <Badge className={category_map[cat].color}>{category_map[cat].label}</Badge> */}
-                    <div className={`${category_map[cat].color} p-2 text-neutral-50 rounded-full`}><IconComponent size={15} /></div>
+                    {/* <Badge className={category_map[cat]?.color}>{category_map[cat]?.label}</Badge> */}
+                    <div className={`${category_map[cat]?.color || 'bg-gray-400'} p-2 text-neutral-50 rounded-full`}>
+                        {IconComponent && <IconComponent size={15} />}
+                    </div>
 
                 </CardAction>
 

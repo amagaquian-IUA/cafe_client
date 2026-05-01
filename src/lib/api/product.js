@@ -1,17 +1,18 @@
-export const getProducts = async () => {
-    const res = await fetch('/data/products.json')
-    const data = await res.json()
+import { supabase } from '../supabase'
 
-    return data
+export const getProducts = async () => {
+    const { data: products } = await supabase.from('products').select(`
+        *,
+        categories!inner (*)    
+    `)
+    return products
 }
 
-
 export const getProdByCat = async (cat) => {
-    const allProds = await getProducts()
-    const res = allProds.filter((e) => e.category === cat)
-    // [] -> en el caso que no encuentre nada
-    // [algo] -> puede ser strings, numeros, objetos u otros arrays
-
-
-    return res
+    const { data: products } = await supabase.from('products').select(`
+        *,
+        categories!inner (*)    
+    `)
+        .eq('categories.name', cat) // equivalente al WHERE categories.name = 
+    return products
 }

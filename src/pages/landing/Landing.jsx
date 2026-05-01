@@ -45,6 +45,7 @@ export default function Landing() {
 
     const fetchCats = async () => {
         const data = await getCategories()
+        console.log(data)
         const allCat = {
             "id": 0,
             "name": "all",
@@ -61,7 +62,7 @@ export default function Landing() {
             setRenderProds(prods)
             return
         }
-        const res = prods.filter((e) => e.title.toLowerCase().includes(filter.toLowerCase()))
+        const res = prods.filter((e) => e.name.toLowerCase().includes(filter.toLowerCase()))
         setRenderProds(res)
     }
 
@@ -115,7 +116,7 @@ export default function Landing() {
                         {
                             renderProds && renderProds.length > 0 ? renderProds.map((e) => (
 
-                                <CardProducts prod={e} />
+                                <CardProducts key={e.id} prod={e} />
                             )) : <p>No se encontraron productos :/</p>
                         }
 
