@@ -13,6 +13,6 @@ export const getProdByCat = async (cat) => {
         *,
         categories!inner (*)    
     `)
-        .eq('categories.name', cat) // equivalente al WHERE categories.name = 
+        .eq('id_category', cat) // equivalente al WHERE id_category = xxxx
     return products
 }
